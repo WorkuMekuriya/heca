@@ -553,12 +553,17 @@ ol {
 }
 
 .member-item {
-	width: 40%;
-	float: left;
-	margin: 5%;
-	height: 420px;
-	position: relative;
-	overflow: hidden;
+    float: left;
+    margin: 6%;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .member-item {
+        width: 20%;
+    }
 }
 
 .member-item:hover .mi-social {
