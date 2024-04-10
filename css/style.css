@@ -501,7 +501,7 @@ ol {
 }
 
 .ha-text {
-	padding-top: 74px;
+	/* padding-top: 74px; */
 }
 
 .ha-text h2 {
@@ -558,6 +558,7 @@ ol {
 .member-item {
     float: left;
     margin: 6%;
+	margin-bottom: 0;
     height: 420px;
     position: relative;
     overflow: hidden;
@@ -1151,6 +1152,7 @@ ol {
 	display: table-cell;
 	vertical-align: middle;
 	height: 41px;
+	resize: both;
 }
 
 .footer-text {
