@@ -279,8 +279,10 @@ ol {
 
 .logo {
 	float: left;
-	padding-top: 36px;
-	padding-bottom: 37px;
+	height: 10%;
+	width: 8%;
+	/* padding-top: 36px; */
+	/* padding-bottom: 37px; */
 }
 
 .logo a {
@@ -392,6 +394,7 @@ ol {
 
 .hero-section {
 	padding-top: 55px;
+	height: 65%;
 }
 
 .hero-section .hero-text {
