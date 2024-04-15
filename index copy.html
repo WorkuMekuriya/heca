@@ -14,7 +14,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -43,13 +43,18 @@
             <div class="nav-menu">
                 <nav class="mainmenu">
                     <ul>
-                        <li class="active"><a href="./index.html">Home</a></li>
-                        <li><a href="./speaker.html">Speakers</a></li>
-                        <li><a href="./schedule.html">Agenda</a></li>
-                        <li><a href="#">Exhibitor</a></li>
-                        <li><a href="#">Sponsors</a></li>
-                        <li><a href="./about-us.html">About</a></li>
-                        <!-- <li><a href="./contact.html">Contacts</a></li> -->
+                        <a href="./exhibitor.html" target="_blank" class="primary-btn">Register Now</a>
+                        <li></li>
+                        <li class="active"><a href="./index.html">Home</a>
+                            <ul class="dropdown mobile-menu">
+                                <li><a href="./speaker.html">Speakers</a></li>
+                                <li><a href="./schedule.html">Agenda</a></li>
+                                <li><a href="#">Exhibitor</a></li>
+                                <li><a href="#">Sponsors</a></li>
+                                <li><a href="./about-us.html">About</a></li>
+                                <li><a href="./contact.html">Contacts</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <!-- <a href="#" class="primary-btn top-btn"><i class="fa fa-ticket"></i> Ticket</a> -->
@@ -60,38 +65,19 @@
     <!-- Header End -->
 
     <!-- Hero Section Begin -->
-    <section class="hero-section">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide set-bg" data-setbg="img/hero.jpg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <div class="hero-text">
-                                    <span>12 to 19 May 2024, Addis Ababa, Ethiopia</span>
-                                    <h2>Elevating Ethiopia Digitally</h2>
-                                    <a href="./exhibitor.html" target="_blank" class="primary-btn">Register Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide set-bg" data-setbg="img/pricing-bg.jpg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <div class="hero-text">
-                                    <h2>The biggest tech & startup show on the planet
-                                        DISTEX GLOBAL 2024
-                                        Independently rated as the best tech event in the world</h2>
-                                </div>
-                            </div>
-                        </div>
+    <section class="hero-section set-bg" data-setbg="img/hero.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="hero-text">
+                        <span>12 to 19 may 2024, Addis Ababa, Ethiopia</span>
+                        <h2>Elevating Ethiopia Digitally</h2>
+                        <a href="./exhibitor.html" target="_blank" class="primary-btn">Register Now</a>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
-
     <!-- Hero Section End -->
 
     <!-- Counter Section Begin -->
@@ -277,7 +263,7 @@
                                                 <div class="sc-text">
                                                     <h4>AI in Healthcare: Transforming Patient Care</h4>
                                                     <ul>
-                                                        <li><i class="fa fa-user"></i> Solomon Kassa</li>
+                                                        <li><i class="fa fa-user"></i>  Solomon Kassa</li>
 
                                                     </ul>
                                                 </div>
@@ -285,8 +271,7 @@
                                             <div class="col-lg-4">
                                                 <ul class="sc-widget">
                                                     <li><i class="fa fa-clock-o"></i> 08:00 AM - 10:00 AM</li>
-                                                    <li><i class="fa fa-map-marker"></i> science museum Addis Ababa,
-                                                        Ethiopia
+                                                    <li><i class="fa fa-map-marker"></i> science museum Addis Ababa, Ethiopia
                                                     </li>
                                                 </ul>
                                             </div>
@@ -737,21 +722,6 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 3500, // Adjust the delay as needed (in milliseconds)
-            },
-            speed: 1000, // Adjust the speed of transition (in milliseconds)
-        });
-    </script>
-
 </body>
 
 </html>
