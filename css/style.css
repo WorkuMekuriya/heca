@@ -277,6 +277,24 @@ ol {
 .header-section.header-normal {
 	border-bottom: 1px solid #e5e5e5;
 }
+/* Adjust border width for "Register Interest" link */
+.nav-menu .mainmenu li:first-child a {
+    border-width: 1px;
+}
+
+/* Adjust border radius for "Exhibitor 2024" button */
+.primary-btn {
+    border-radius: 10px;
+	cursor: pointer;
+}
+
+.primary {
+	border: 1px solid black;
+	padding: 10px;
+	border-radius: 10px;
+	color: #000;
+	cursor: pointer;
+}
 
 .logo {
 	float: left;
