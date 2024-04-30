@@ -41,9 +41,9 @@
   </head>
 
   <body>
-    <!-- <div id="preloder">
+    <div id="preloder">
       <div class="loader"></div>
-    </div> -->
+    </div>
 
     <header class="header-section fixed-top">
       <div class="container">
@@ -187,8 +187,24 @@
                   ></div>
                 </div>
 
+                <div class="form-group">
+                  <span class="form-label">Upload File</span>
+                  <input
+                    id="fileInput"
+                    class="form-control"
+                    type="file"
+                    accept=".pdf,.doc,.docx"
+                    placeholder="Upload your file"
+                  />
+                </div>
+
                 <div class="form-btn">
-                  <button type="submit" class="submit-btn">Register Now</button>
+                  <button type="submit" class="submit-btn" id="submitButton">
+                    Register Now
+                  </button>
+                  <div id="loadingIndicator" style="display: none">
+                    Loading...
+                  </div>
                 </div>
               </form>
             </div>
@@ -197,7 +213,6 @@
       </div>
     </div>
   </body>
-  <!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
 
 <script>
@@ -228,6 +243,9 @@
   function validatePhone() {
     const phone = phoneInput.value.trim();
     const phonePattern = /^\+?\d{10,13}$/;
+    // const phonePattern = /^\+?\d{12}$|^\+?\d{10}$/;
+    // const phonePattern = /^\d{10}$|^\+\d{12}$/;
+    // const phonePattern = /^(\+\d{12}|\d{10})$/;
 
     if (!phonePattern.test(phone)) {
       phoneError.textContent = "Please enter a valid phone number";
@@ -262,11 +280,11 @@
     validateField(positionSelect, document.getElementById("positionError"));
   });
 
-  phoneInput.addEventListener("input", function () {
-    validateField(phoneInput, document.getElementById("phoneError"));
-  });
+  // phoneInput.addEventListener("input", function () {
+  //   validateField(phoneInput, document.getElementById("phoneError"));
+  // });
 
-  // phoneInput.addEventListener("input", validatePhone);
+  phoneInput.addEventListener("input", validatePhone);
   emailInput.addEventListener("input", validateEmail);
 
   form.addEventListener("submit", function (event) {
@@ -280,10 +298,7 @@
       document.getElementById("lastNameError")
     );
 
-    const isPhoneValid = validateField(
-      phoneInput,
-      document.getElementById("phoneError")
-    );
+    const isPhoneValid = validatePhone();
 
     const isPositionValid = validateField(
       positionSelect,
@@ -299,6 +314,9 @@
     ) {
       event.preventDefault(); // Prevent form submission if email is invalid
     } else {
+      document.getElementById("submitButton").style.display = "none";
+      document.getElementById("loadingIndicator").style.display = "block";
+
       const formData = {
         firstName: firstNameInput.value.trim(),
         lastName: lastNameInput.value.trim(),
@@ -306,6 +324,15 @@
         phone: phoneInput.value.trim(),
         position: positionSelect.value.trim(),
       };
+
+      const file = new FormData();
+      const fileInput = document.getElementById("fileInput");
+      if (fileInput.files.length > 0) {
+        file.append("file", fileInput.files[0]);
+      }
+
+      console.log(file);
+      console.log(formData);
 
       // Example: Sending form data using Fetch API
       fetch("your-backend-url", {
@@ -337,3 +364,11 @@
     }
   });
 </script>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
