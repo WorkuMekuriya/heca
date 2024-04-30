@@ -1,0 +1,27 @@
+name: Stride Ethiopia - Auto Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: SSH into the server and manage services
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          password: ${{ secrets.EC2_SSH_PASS }}
+          script: |
+            echo "Deploying changes"
+            cd /strideethiopia/heca
+            
+            # Pull changes from master
+            git pull
