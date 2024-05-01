@@ -299,7 +299,7 @@ ol {
 .logo {
 	float: left;
 	height: 15%;
-	width: 15%;
+	width: 25%;
 	padding-top: 16px;
 	/* padding-bottom: 16px; */
 }
@@ -544,7 +544,7 @@ ol {
 }
 
 .home-about-section {
-	padding-bottom: 90px;
+	/* padding-bottom: 90px; */
 }
 
 .ha-pic {
