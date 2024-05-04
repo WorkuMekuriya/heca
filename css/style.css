@@ -298,9 +298,9 @@ ol {
 
 .logo {
 	float: left;
-	height: 15%;
-	width: 25%;
-	padding-top: 16px;
+	height: 12%;
+	width: 22%;
+	/* padding-top: 16px; */
 	/* padding-bottom: 16px; */
 }
 
