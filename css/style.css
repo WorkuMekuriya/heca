@@ -1797,10 +1797,11 @@ ol {
 
 .blog-item .bi-text h5 {
 	margin-bottom: 10px;
+	font-weight: bold;
 }
 
 .blog-item .bi-text h5 a {
-	color: #ffffff;
+	color: #000000;
 	line-height: 24px;
 	font-weight: 600;
 	display: block;
@@ -1808,11 +1809,12 @@ ol {
 
 .blog-item .bi-text h3 {
 	margin-bottom: 15px;
+	font-weight: bold;
 }
 
 .blog-item .bi-text h3 a {
 	font-size: 28px;
-	color: #ffffff;
+	color: #000000;
 	font-weight: 600;
 	line-height: 36px;
 	display: block;
@@ -1820,7 +1822,7 @@ ol {
 
 .blog-item .bi-text span {
 	font-size: 14px;
-	color: #ffffff;
+	color: #000000;
 	display: block;
 }
 
