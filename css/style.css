@@ -1790,9 +1790,10 @@ ol {
 .blog-item .bi-text {
 	position: absolute;
 	left: 0;
-	bottom: 18px;
+	bottom: 10px;
 	width: 100%;
-	padding: 0 20px;
+	padding: 20px;
+	background-color: rgb(255, 255, 255);
 }
 
 .blog-item .bi-text h5 {
