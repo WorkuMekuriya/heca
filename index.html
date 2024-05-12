@@ -25,13 +25,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
-<body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Header Section Begin -->
+<body><!-- Header Section Begin -->
     <header class="header-section fixed-top">
         <div class="container">
             <div class="logo">
@@ -308,7 +302,8 @@
                     <div class="latest-item set-bg large-item" data-setbg="img/blog/latest-b/latest-1.jpg">
                         <div class="li-tag">Marketing</div>
                         <div class="li-text">
-                            <h4><a href="https://www.facebook.com/MInT.Ethiopia?mibextid=ZbWKwL">Improve Your Business Cards And Enhance Your Sales</a>
+                            <h4><a href="https://www.facebook.com/MInT.Ethiopia?mibextid=ZbWKwL">Improve Your Business
+                                    Cards And Enhance Your Sales</a>
                             </h4>
                             <span><i class="fa fa-clock-o"></i> 19th May, 2024</span>
                         </div>
@@ -318,7 +313,8 @@
                     <div class="latest-item set-bg" data-setbg="img/blog/latest-b/latest-2.jpg">
                         <div class="li-tag">Experience</div>
                         <div class="li-text">
-                            <h5><a href="https://www.facebook.com/MInT.Ethiopia?mibextid=ZbWKwL">All users on MySpace will know that there are millions of
+                            <h5><a href="https://www.facebook.com/MInT.Ethiopia?mibextid=ZbWKwL">All users on MySpace
+                                    will know that there are millions of
                                     people out there.</a></h5>
                             <span><i class="fa fa-clock-o"></i> 19th May, 2024</span>
                         </div>
@@ -326,7 +322,8 @@
                     <div class="latest-item set-bg" data-setbg="img/blog/latest-b/latest-3.jpg">
                         <div class="li-tag">Marketing</div>
                         <div class="li-text">
-                            <h5><a href="https://www.facebook.com/MInT.Ethiopia?mibextid=ZbWKwL">A Pocket PC is a handheld computer, which features many of
+                            <h5><a href="https://www.facebook.com/MInT.Ethiopia?mibextid=ZbWKwL">A Pocket PC is a
+                                    handheld computer, which features many of
                                     the same capabilities.</a></h5>
                             <span><i class="fa fa-clock-o"></i> 19th May, 2024</span>
                         </div>
@@ -455,6 +452,8 @@
             },
             speed: 1500, // Adjust the speed of transition (in milliseconds)
         });
+    </script>
+    <script>
 
         // Sample data representing each day's schedule
         const scheduleData = [
@@ -692,7 +691,7 @@
                     // Add click event listener to the event
                     eventContent.addEventListener('click', () => {
                         // Convert the event data to JSON and encode it
-                        const encodedData = encodeURIComponent(JSON.stringify({title: event.title, time: event.time, location: event.location}));
+                        const encodedData = encodeURIComponent(JSON.stringify({ title: event.title, time: event.time, location: event.location }));
 
                         // Redirect to the new page with the encoded data as a query parameter
                         window.location.href = `program-registration.html?data=${encodedData}`;
