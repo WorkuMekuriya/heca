@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Manup Template">
+    <meta name="keywords" content="Manup, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stride Ethiopia | 2024</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Your header and other HTML content can go here -->
+
+    <header class="header-section fixed-top">
+        <div class="container">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="img/logo.png" alt="STRIDE ETHIOPIA EXPO 2024">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <nav class="mainmenu">
+                    <ul>
+                        <li>
+                            <p class="primary-btn" onclick="window.open('./exhibitor.html');">Exhibit 2024</p>
+                        </li>
+                        <li><a>Menu ▼ </a>
+                            <ul class="dropdown mobile-menu">
+                                <li class="active"><a href="./index.html">Home</a></li>
+                                <li><a href="./hackathon.html">Hackathon</a></li>
+                                <li><a href="./sti-award.html">STI Award</a></li>
+                                <!-- <li><a href="./speaker.html">Exhibitor</a></li> -->
+                                <li><a href="./sponsors.html">Sponsors</a></li>
+                                <li><a href="./about-us.html">About</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- <a href="#" class="primary-btn top-btn"><i class="fa fa-ticket"></i> Ticket</a> -->
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Breadcrumb Section Begin -->
+    <section class="contact-form-section spad breadcrumb-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Participant Registration</h2>
+                <p>Participate in the STRIDE Ethiopia 2024 event by registering here.</p>
+            </div>
+            <form id="registrationForm" class="container comment-form contact-form">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p>First Name<span style="color: red;"> *</span></p>
+                        <input type="text" name="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>Last Name<span style="color: red;"> *</span></p>
+                        <input type="text" name="lastName" placeholder="Last Name" required>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>Email<span style="color: red;"> *</span></p>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>Sector<span style="color: red;"> *</span></p>
+                        <select id="sector" class="form-control"
+                            style="background-color: #f4f6f8; border-color: #f4f6f8; height: 50px;" required>
+                            <option value="">Select Company Sector</option>
+                            <option value="manager">Telecommunications</option>
+                            <option value="assistant">Fintech</option>
+                            <option value="volunteer">Software Development and IT Solutions</option>
+                            <option value="assistant">Digital Services and E-commerce</option>
+                            <option value="assistant">Innovation and Research Labs</option>
+                            <option value="assistant">Incubators and Accelerators</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>Company / Institution<span style="color: red;"> *</span></p>
+                        <input type="text" name="company" placeholder="Company / Institution" required>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>Position<span style="color: red;"> *</span></p>
+                        <input type="text" name="position" placeholder="Position" required>
+                    </div>
+                    <div class="col-lg-12">
+                        <p>Please describe your area of interest</p>
+                        <textarea name="areaOfInterest" placeholder="Please describe your area of interest"></textarea>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <button type="submit" class="site-btn">Register</button>
+                    </div>
+                </div>
+            </form>
+            <div id="responseMessage" style="display: none; text-align: center; margin-top: 10px;">
+                <p id="responseText"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include JavaScript files -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Add other JavaScript files as necessary -->
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Create an object to hold form data
+            let formDataObj = {};
+
+            // Get all form elements
+            const formElements = this.elements;
+
+            // Iterate through form elements
+            for (let i = 0; i < formElements.length; i++) {
+                const element = formElements[i];
+
+                // Check if the element is an input or select element with a name
+                if (element.nodeName === 'INPUT' || element.nodeName === 'SELECT') {
+                    const name = element.name;
+                    const value = element.value;
+
+                    // Add the name-value pair to the formDataObj
+                    formDataObj[name] = value;
+                }
+            }
+
+            // Get the value of the "sector" select element
+            const sectorSelect = document.getElementById('sector');
+            const selectedSector = sectorSelect.options[sectorSelect.selectedIndex].value;
+
+            // Add the "sector" value to the formDataObj
+            formDataObj['sector'] = selectedSector;
+
+            // Create a URL object to parse the URL
+            const urlObj = new URL(window.location.href);
+
+            // Retrieve the 'data' parameter from the URL
+            const dataParam = urlObj.searchParams.get('data');
+
+            // Check if the data parameter exists
+            if (dataParam) {
+                // Decode the JSON data
+                const additionalData = JSON.parse(decodeURIComponent(dataParam));
+
+                // Merge additional data with formDataObj
+                Object.assign(formDataObj, additionalData);
+            }
+
+            // Convert formDataObj to JSON string
+            const jsonBody = JSON.stringify(formDataObj);
+
+            // Send the data to the REST API using fetch
+            fetch('https://dus6rijby9.execute-api.us-east-2.amazonaws.com/prod/strideControler/add_participant', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: jsonBody,
+            })
+                .then(response => {
+                    // Check if the response is successful (status 2xx)
+                    if (response.ok) {
+                        return response.json(); // Parse the JSON response
+                    } else {
+                        throw new Error('Failed to submit form');
+                    }
+                })
+                .then(data => {
+                    // Display success message
+                    document.getElementById('responseMessage').style.display = 'block';
+                    alert('Form submitted successfully')
+                    document.getElementById('responseText').textContent = 'Form submitted successfully!';
+                    window.location.href = 'index.html';
+                })
+                .catch(error => {
+                    // Display error message
+                    document.getElementById('responseMessage').style.display = 'block';
+                    alert(error.message)
+                    // document.getElementById('responseText').textContent = 'Error: ' + error.message;
+                });
+        });
+
+    </script>
+
+</body>
+
+</html>
