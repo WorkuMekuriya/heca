@@ -1193,12 +1193,15 @@ ol {
 
 .footer-section {
 	background: #171822;
-	padding-top: 50px;
+	/* padding-top: 50px; */
 	padding-bottom: 60px;
 }
 
 .partner-logo {
-	padding-bottom: 50px;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	padding: 25px;
 	border-bottom: 1px solid #2f3039;
 }
 
