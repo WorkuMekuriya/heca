@@ -1578,6 +1578,7 @@ ol {
 .speaker-item .si-pic img {
 	height: 150px;
 	border-radius: 2px;
+	object-fit: contain;
 }
 
 .speaker-item .si-text .si-title {
