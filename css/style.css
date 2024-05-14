@@ -1210,6 +1210,12 @@ ol {
 	display: table;
 }
 
+.owl-stage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .partner-logo .pl-table .pl-tablecell {
 	display: table-cell;
 	vertical-align: middle;
@@ -1564,8 +1570,13 @@ ol {
 	margin-bottom: 50px;
 }
 
+.si-pic {
+	display: flex;
+	justify-content: center;
+}
+
 .speaker-item .si-pic img {
-	min-width: 100%;
+	height: 150px;
 	border-radius: 2px;
 }
 
