@@ -37,7 +37,7 @@
                 <nav class="mainmenu">
                     <ul>
                         <li>
-                            <p class="primary" onclick="window.location.href='./program-registration.html';">Register Interest
+                            <p class="primary" onclick="window.location.href='https://bit.ly/STRIDEExpo2024';">Register Interest
                             </p>
                         </li>
                         <li>
@@ -45,7 +45,7 @@
                         </li>
                         <li><a>Menu ▼ </a>
                             <ul class="dropdown mobile-menu">
-                                <li><a href="./program-registration.html">Register Interest</a></li>
+                                <li><a href="https://bit.ly/STRIDEExpo2024">Register Interest</a></li>
                                 <li><a href="./exhibitor.html">Exhibit 2024</a></li>
                                 <li><a href="./hackathon.html">Hackathon</a></li>
                                 <li><a href="./stride-award.html">STRIDE Award</a></li>
@@ -709,13 +709,13 @@
                 `;
 
                     // Add click event listener to the event
-                    eventContent.addEventListener('click', () => {
-                        // Convert the event data to JSON and encode it
-                        const encodedData = encodeURIComponent(JSON.stringify({ title: event.title, time: event.time, location: event.location }));
+                    // eventContent.addEventListener('click', () => {
+                    //     // Convert the event data to JSON and encode it
+                    //     const encodedData = encodeURIComponent(JSON.stringify({ title: event.title, time: event.time, location: event.location }));
 
-                        // Redirect to the new page with the encoded data as a query parameter
-                        window.location.href = `program-registration.html?data=${encodedData}`;
-                    });
+                    //     // Redirect to the new page with the encoded data as a query parameter
+                    //     window.location.href = `program-registration.html?data=${encodedData}`;
+                    // });
 
                     tabPane.appendChild(eventContent);
                 });
